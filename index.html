@@ -16,15 +16,16 @@
 <body>
 
 <h1 class="title rock-3d-regular">
-BUY WHAT YOU LIKE</h1>
+  BUY WHAT YOU LIKE
+</h1>
 
 <div class="container-fluid">
   <div class="row">
 
-    <!-- PRODUCT 1: HOME -->
+    <!-- HOME -->
     <div class="col-md-6 product red">
 
-      <h2 class="chelsea-market-regular" >home</h2>
+      <h2 class="chelsea-market-regular">home</h2>
 
       <img id="homeImg"
            class="product-img"
@@ -32,17 +33,22 @@ BUY WHAT YOU LIKE</h1>
            alt="home image"
            onclick="showRandomHomeImage()">
 
-      <p class="chelsea-market-regular">$564</p>
+      <p id="homePrice" class="chelsea-market-regular">$564</p>
 
-      <button onclick="addToCart(1)">ADD</button>
+      <p id="homeCounter" class="counter">
+        3 CLICKS LEFT
+      </p>
 
+      <button onclick="addToCart(currentHome)">
+        ADD
+      </button>
 
     </div>
 
-    <!-- PRODUCT 2: FOOD -->
+    <!--FOOD -->
     <div class="col-md-6 product yellow">
 
-      <h2 class="chelsea-market-regular" > food</h2>
+      <h2 class="chelsea-market-regular">food</h2>
 
       <img id="foodImg"
            class="product-img"
@@ -50,31 +56,46 @@ BUY WHAT YOU LIKE</h1>
            alt="food image"
            onclick="showRandomFoodImage()">
 
-      <p class="chelsea-market-regular">$5</p>
+      <p id="foodPrice" class="chelsea-market-regular">$5</p>
 
-      <button onclick="addToCart(2)">ADD</button>
+      <p id="foodCounter" class="counter">
+        3 CLICKS LEFT
+      </p>
 
+      <button onclick="addToCart(currentFood)">
+        ADD
+      </button>
 
     </div>
 
-    <!-- PRODUCT 3: HOBBY -->
+    <!-- HOBBY -->
     <div class="col-md-12 product blue big">
 
-  <!-- Wrap the title and image in a flex container -->
-      <h2 class="chelsea-market-regular" > hobby</h2>
-  <div class="d-flex align-items-center">
+      <h2 class="chelsea-market-regular">hobby</h2>
 
-    <img id="hobbyImg"
-         class="product-img ms-3" 
-         src="./assets/img/hobby/reading.png"
-         alt="hobby image"
-         onclick="showRandomHobbyImage()">
-  </div>
+      <div class="d-flex align-items-center">
 
-  <p class="chelsea-market-regular" >$89</p>
-  <button onclick="addToCart(3)">ADD</button>
+        <img id="hobbyImg"
+             class="product-img ms-3"
+             src="./assets/img/hobby/reading.png"
+             alt="hobby image"
+             onclick="showRandomHobbyImage()">
 
-</div>
+      </div>
+
+      <p id="hobbyPrice" class="chelsea-market-regular">
+        $89
+      </p>
+
+      <p id="hobbyCounter" class="counter">
+        3 CLICKS LEFT
+      </p>
+
+      <button onclick="addToCart(currentHobby)">
+        ADD
+      </button>
+
+    </div>
 
   </div>
 </div>
