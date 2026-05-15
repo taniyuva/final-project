@@ -30,7 +30,6 @@ body {
 }
 
 
-/* PRODUCT BLOCKS */
 .product {
   padding: 60px;
   color: black;
@@ -52,23 +51,22 @@ body {
   color: black;
 }
 
-/* COLORS */
 .red { background: #ff2e2e; }
 .yellow { background: #ffe600; }
 .blue { background: #0066ff; color: white; }
 
-.blue a { color: white; }
+.blue a { 
+  color: white; 
+}
 
-/* BIG BLOCK */
 .big {
-  height: 500px; /* Increase this number to make it taller */
+  height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* This keeps your content centered vertically */
+  justify-content: flex-start;
 }
 
 
-/* BUTTON */
 button {
   position: absolute;
   bottom: 20px;
@@ -80,10 +78,10 @@ button {
   color: white;
 }
 
-/* CART BUTTON */
+
 .cartBtn {
   position: fixed;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
   background: black;
   color: white;
@@ -92,7 +90,6 @@ button {
   font-weight: bold;
 }
 
-/* HOVER = slight chaos */
 .product:hover {
   transform: scale(1.03);
 }
@@ -123,14 +120,17 @@ h1{
 }
 
 .cart-item {
-
   border: 2px solid black;
-
   padding: 20px;
-
   margin: 20px;
-
   border-radius: 12px;
-
   background: #f4f4f4;
+}
+
+
+.counter {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -10px;
+  opacity: 0.8;
 }
