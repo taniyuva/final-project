@@ -156,11 +156,13 @@ let homeClicks = 3;
 let foodClicks = 3;
 let hobbyClicks = 3;
 
-// randomizer -- uses do while loops to randomize and then checks if random is equal to the current 
+// Picks a random item from array but avoids repeating the current item by using a do while loop 
 
 function getRandomItem(arr, current) {
 
   let random;
+  
+  // keep picking until it's different from current
 
   do {
     random =
@@ -175,6 +177,7 @@ function getRandomItem(arr, current) {
 
 function showRandomHomeImage() {
 
+  // stop if there are no clicks left
   if (homeClicks <= 0) return;
 
   homeClicks--; // decrement the number of clicks
@@ -191,6 +194,7 @@ function showRandomHomeImage() {
   document.getElementById("homePrice").innerText =
     "$" + currentHome.price;
 
+  // lock the category when the number of clicks reached 0 
   if (homeClicks === 0) {
     document.getElementById("homeCounter").innerText =
       "LOCKED";
@@ -251,12 +255,13 @@ function showRandomHobbyImage() {
 
 // ADD TO CART
 
+// stores the selected the items in localStorage
 function addToCart(product) {
 
   let cart =
     JSON.parse(localStorage.getItem("cart")) || [];
 
-  cart.push(product);
+  cart.push(product); // add new product
 
   localStorage.setItem("cart", JSON.stringify(cart));
 }
