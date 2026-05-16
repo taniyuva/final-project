@@ -145,19 +145,18 @@ const hobbyProducts = [
   }
 ];
 
-// CURRENT PRODUCTS
 
 let currentHome = homeProducts[0];
 let currentFood = foodProducts[0];
 let currentHobby = hobbyProducts[0];
 
-// CLICK LIMITS
+// the limit of clicks
 
 let homeClicks = 3;
 let foodClicks = 3;
 let hobbyClicks = 3;
 
-// RANDOM FUNCTION
+// randomizer -- uses do while loops to randomize and then checks if random is equal to the current 
 
 function getRandomItem(arr, current) {
 
@@ -178,7 +177,7 @@ function showRandomHomeImage() {
 
   if (homeClicks <= 0) return;
 
-  homeClicks--;
+  homeClicks--; // decrement the number of clicks
 
   document.getElementById("homeCounter").innerText =
     `${homeClicks} CLICKS LEFT`;
